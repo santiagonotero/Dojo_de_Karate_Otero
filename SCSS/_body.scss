@@ -1,0 +1,23 @@
+// Variables
+
+$colorTexto: #efefef;
+$colorFondo: #010101;
+
+
+body{
+    background-color: $colorFondo;
+    color: $colorTexto;
+
+
+    main section ul{
+        margin-left: 20px;
+        list-style:disc;
+
+    }
+
+    .contenedor{
+        width: 90%;
+        max-width: 1700px;
+        margin:0 auto;
+    }
+}

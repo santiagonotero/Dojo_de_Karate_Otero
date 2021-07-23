@@ -1,0 +1,27 @@
+//Variables
+
+$flyerGrande:url("/Images/FlyerPpal.png");
+$flyerChico: url("/Images/FlyerPpal150x414.png");
+
+// Contenido
+
+#divFlyer{
+    display: flex;
+    background-color: black;
+    background-image: $flyerGrande;
+    background-size: cover;
+    background-attachment:local;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%;
+
+    @media (max-width:576px){
+        background-image: $flyerChico;
+    }
+
+    @media (max-width:768px){
+    background-image: $flyerChico;
+    }
+}

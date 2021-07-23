@@ -1,0 +1,78 @@
+// Variables
+
+$colorHiperlink: yellow;
+$colorHiperlinkHover: red;
+$colorDeFondo: #010101;
+
+// Reset General
+
+*{
+    font-family: 'Tajawal', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+//Mapas
+$tamanioFuentes:(
+    h1: 40px,
+    h2: 32px,
+    h3: 25px
+);
+
+// Bucles
+
+@for $contador from 1 to 4 {
+    h#{$contador}{
+        font-weight: bold;
+        margin-top: (60-($contador*10))px;
+        margin-bottom: (60-($contador*10))px;
+    }
+}
+
+// Uso del mapa
+
+@each $tamanio, $valor in $tamanioFuentes {
+    #{$tamanio}{
+        font-size: $valor;
+    }
+    
+}
+
+// Contenido principal
+
+a {
+    color:$colorHiperlink;
+    &:hover{
+        color:$colorHiperlinkHover;
+        text-decoration: none;
+    }
+}
+
+p{
+    font-size: 20px;
+}
+
+// h1{
+//     font-size: 40px;
+//     font-weight:bold;
+//     margin-top: 50px;
+//     margin-bottom: 50px;
+// }
+
+// h2{
+//     font-size: 32px;
+//     font-weight: bold;
+//     margin-top: 40px;
+//     margin-bottom: 40px;
+// }
+
+// h3{
+//     font-size: 25px;
+//     font-weight: bold;
+//     margin-top: 30px;
+//     margin-bottom: 30px;
+// }
+
+html{
+    background-color: $colorDeFondo;
+}

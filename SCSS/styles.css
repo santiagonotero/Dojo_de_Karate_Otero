@@ -1,0 +1,529 @@
+* {
+  font-family: 'Tajawal', sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+h1 {
+  font-weight: bold;
+  margin-top: 50 px;
+  margin-bottom: 50 px;
+}
+
+h2 {
+  font-weight: bold;
+  margin-top: 40 px;
+  margin-bottom: 40 px;
+}
+
+h3 {
+  font-weight: bold;
+  margin-top: 30 px;
+  margin-bottom: 30 px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+a {
+  color: yellow;
+}
+
+a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+p {
+  font-size: 20px;
+}
+
+html {
+  background-color: #010101;
+}
+
+body {
+  background-color: #010101;
+  color: #efefef;
+}
+
+body main section ul {
+  margin-left: 20px;
+  list-style: disc;
+}
+
+body .contenedor {
+  width: 90%;
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
+header {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+}
+
+header .barraNavegador {
+  display: -ms-inline-grid;
+  display: inline-grid;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-grid-columns: 1fr 3fr 1fr;
+      grid-template-columns: 1fr 3fr 1fr;
+      grid-template-areas: "areaLogo areaMenu redesSociales";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .barraNavegador #areaLogo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: areaLogo;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  padding: 10px 20px;
+}
+
+header .barraNavegador #botonMenuHam {
+  display: none;
+}
+
+header .barraNavegador #barraMenu {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: areaMenu;
+  padding: 0px 20px;
+}
+
+header .barraNavegador #barraMenu a {
+  color: white;
+}
+
+header .barraNavegador #barraMenu a:hover {
+  color: #e96363;
+}
+
+header .barraNavegador #barraMenu .menu {
+  display: inline;
+  padding: 10px;
+  text-align: center;
+}
+
+header .barraNavegador #barraMenu .menu-cerrar {
+  display: none;
+}
+
+header .barraNavegador .barraRS {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding: 0px 20px;
+}
+
+header .barraNavegador .barraRS #botonFB, header .barraNavegador .barraRS #botonYT, header .barraNavegador .barraRS #botonIG {
+  display: inline;
+  padding: 20px 40px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: redesSociales;
+}
+
+header .barraNavegador .barraRS #botonFB {
+  background-image: url("/Pictures/LogoFB.png");
+}
+
+header .barraNavegador .barraRS #botonFB:hover {
+  cursor: pointer;
+  -webkit-animation-name: circuloCreciente;
+          animation-name: circuloCreciente;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  background-image: url("/Pictures/LogoFB_hover.png");
+}
+
+header .barraNavegador .barraRS #botonYT {
+  background-image: url("/Pictures/LogoYT.png");
+}
+
+header .barraNavegador .barraRS #botonYT:hover {
+  cursor: pointer;
+  -webkit-animation-name: circuloCreciente;
+          animation-name: circuloCreciente;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  background-image: url("/Pictures/LogoYT_hover.png");
+}
+
+header .barraNavegador .barraRS #botonIG {
+  background-image: url("/Pictures/LogoIG.png");
+}
+
+header .barraNavegador .barraRS #botonIG:hover {
+  cursor: pointer;
+  -webkit-animation-name: circuloCreciente;
+          animation-name: circuloCreciente;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  background-image: url("/Pictures/LogoIG_hover.png");
+}
+
+@media (max-width: 1200px) {
+  header .barraNavegador {
+    display: -ms-grid;
+    display: grid;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    -ms-grid-columns: 1fr 5fr 1fr;
+        grid-template-columns: 1fr 5fr 1fr;
+        grid-template-areas: "areaLogo areaMenu redesSociales";
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .barraNavegador .barraRS {
+    padding: 0px 10px;
+  }
+  header .barraNavegador .barraRS #botonYT, header .barraNavegador .barraRS #botonFB, header .barraNavegador .barraRS #botonIG {
+    padding: 0px 20px;
+  }
+  header .barraNavegador #areaLogo {
+    padding: 10px 10px;
+  }
+  header .barraNavegador #barraMenu {
+    padding: 10px 10px;
+  }
+  header .barraNavegador #barraMenu ul {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
+@media (max-width: 992px) {
+  header .barraNavegador {
+    display: -ms-grid;
+    display: grid;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-grid-columns: 1fr 6fr 1fr;
+        grid-template-columns: 1fr 6fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "areaLogo areaMenu redesSociales";
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .barraNavegador #barraMenu ul {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0px 10px;
+    text-align: justify;
+  }
+  header .barraNavegador #areaLogo {
+    padding: 10px 10px;
+    content: url("/Images/LogoMini.png");
+  }
+  header .barraNavegador .barraRS {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  header .barraNavegador {
+    display: -ms-grid;
+    display: grid;
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    -ms-grid-columns: 1fr 6fr 1fr;
+        grid-template-columns: 1fr 6fr 1fr;
+        grid-template-areas: "areaLogo redesSociales botonMenu";
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  header .barraNavegador #botonMenuHam {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: botonMenu;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    display: block;
+  }
+  header .barraNavegador .barraRS {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header .barraNavegador #barraMenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: black;
+    position: absolute;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    z-index: 1;
+    width: 100%;
+    top: -500%;
+  }
+  header .barraNavegador #barraMenu ul {
+    display: -ms-inline-grid;
+    display: inline-grid;
+  }
+  header .barraNavegador #barraMenu ul li {
+    display: block;
+  }
+  header .barraNavegador #barraMenu ul .menu-cerrar {
+    display: block;
+  }
+  header .barraNavegador #barraMenu:target {
+    margin-top: -60px;
+    top: 100%;
+    -webkit-transition: top 0.4s;
+    transition: top 0.4s;
+  }
+}
+
+@-webkit-keyframes circuloCreciente {
+  from {
+    background-image: url("/Pictures/Anillo.png");
+    background-size: 0%;
+    opacity: 1;
+  }
+  to {
+    background-image: url("/Pictures/Anillo.png");
+    background-size: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes circuloCreciente {
+  from {
+    background-image: url("/Pictures/Anillo.png");
+    background-size: 0%;
+    opacity: 1;
+  }
+  to {
+    background-image: url("/Pictures/Anillo.png");
+    background-size: 100%;
+    opacity: 0;
+  }
+}
+
+#tablaDojos {
+  background-image: -webkit-gradient(linear, left top, right top, from(darkcyan), to(#033030));
+  background-image: linear-gradient(to right, darkcyan, #033030);
+}
+
+#tablaDojos .headerTablaDojos {
+  background-color: #113030;
+  text-align: center;
+  padding: 10px;
+}
+
+#tablaDojos .contentTablaDojos {
+  padding: 10px;
+}
+
+#divFlyer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: black;
+  background-image: url("/Images/FlyerPpal.png");
+  background-size: cover;
+  background-attachment: local;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  #divFlyer {
+    background-image: url("/Images/FlyerPpal150x414.png");
+  }
+}
+
+@media (max-width: 768px) {
+  #divFlyer {
+    background-image: url("/Images/FlyerPpal150x414.png");
+  }
+}
+
+.contenedor form {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.contenedor form #campoNombre, .contenedor form #campoMail, .contenedor form #campoTelefono, .contenedor form #campoConsulta {
+  font-size: 20px;
+  font-weight: 600;
+  width: 400px;
+  color: #010101;
+  display: block;
+}
+
+.contenedor form #botonSubmit, .contenedor form #botonReset {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.contenedor form label {
+  margin: 0px;
+}
+
+.contenedor form label p {
+  margin: 15px 0px 0px 0px;
+}
+
+footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 2fr 1fr;
+      grid-template-rows: 2fr 1fr;
+      grid-template-areas: "footerDireccion footerHorario" "footerCopyright footerCopyright";
+  margin-top: 100px;
+  padding-top: 20px;
+  background-color: lightgrey;
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+}
+
+footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  padding: 1%;
+}
+
+footer #footerDireccion {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: footerDireccion;
+}
+
+footer #footerDireccion .footerColumna {
+  list-style: none;
+}
+
+footer #footerDireccion .footerColumna .footerBold {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+footer #footerHorario {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: footerHorario;
+}
+
+footer #footerHorario .footerColumna {
+  list-style: none;
+}
+
+footer #footerHorario .footerColumna .footerBold {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+footer #footerCopyright {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: footerCopyright;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 450px) {
+  footer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 2fr 2fr 1fr;
+        grid-template-rows: 2fr 2fr 1fr;
+        grid-template-areas: "footerDireccion" "footerHorario" "footerCopyright";
+  }
+}
+/*# sourceMappingURL=styles.css.map */

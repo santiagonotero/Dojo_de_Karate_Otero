@@ -1,0 +1,64 @@
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: "footerDireccion footerHorario"
+                            "footerCopyright footerCopyright";
+    margin-top: 100px;
+    padding-top: 20px;
+    background-color: lightgrey;
+    font-size: 16px;
+    color:black;
+    font-weight: bold;
+
+    div{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: center;
+        padding: 1%;
+    }
+
+    #footerDireccion{
+        grid-area: footerDireccion;
+
+        .footerColumna{
+            list-style: none;
+
+                .footerBold{
+                font-size: 25px;
+                font-weight: bold;
+            }
+        }
+    }
+    
+    #footerHorario{
+        grid-area: footerHorario;
+
+        .footerColumna{
+            list-style: none;
+    
+            .footerBold{
+                font-size: 25px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    #footerCopyright{
+        grid-area: footerCopyright;
+        align-items: center;
+    }
+    
+
+    @media (max-width:450px) {
+        display:grid;
+        align-self: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 2fr 1fr;
+        grid-template-areas: "footerDireccion"
+                            "footerHorario"
+                            "footerCopyright";
+    }
+}

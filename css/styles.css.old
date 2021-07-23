@@ -1,0 +1,556 @@
+/*Ajustes generales */
+
+*{
+    font-family: 'Tajawal', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    color:yellow;
+}
+
+a:hover{
+    color:red;
+    text-decoration: none;
+}
+
+p{
+    font-size: 20px;
+}
+
+h1{
+    font-size: 40px;
+    font-weight:bold;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+h2{
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+h3{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+html{
+    background-color: black;
+}
+
+/* Encabezado */
+
+header a{
+    color: white;
+    text-decoration: none;
+} 
+
+header{
+    display: inline-grid;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Barra de navegación */
+
+nav{
+    display: inline-grid;
+    grid-template-columns: 1fr 4fr 1fr; 
+    grid-template-areas: "areaLogo areaMenu redesSociales";
+    justify-content: center;
+    align-items: center;
+}
+
+#areaLogo{
+    grid-area: areaLogo;
+    justify-self: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#barraMenu{
+    flex-direction: row;
+    justify-content: center;
+    grid-area: areaMenu;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.barraRS{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.menu{
+    display: inline;
+    padding: 20px;
+    text-align: center;    
+}
+
+.redesSociales{
+    display: inline;
+    padding: 20px;
+    text-align: center;  
+    grid-area: redesSociales;
+}
+
+.barraNavegador{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+nav li a:hover{
+    color: rgb(233, 99, 99);
+}
+
+
+#botonFB, #botonYT, #botonIG{
+    display: inline;
+    padding: 20px 40px;
+    text-align: center; 
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    grid-area: redesSociales;
+}
+
+#botonFB{
+    background-image: url("/Pictures/LogoFB.png");
+}
+
+#botonYT{
+    background-image: url("/Pictures/LogoYT.png");
+}
+
+#botonIG{
+    background-image: url("/Pictures/LogoIG.png");
+}
+
+#botonFB:hover{
+    cursor: pointer;
+    animation-name: circuloCreciente;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-duration: 0.6s;
+    background-image: url("/Pictures/LogoFB_hover.png");
+}
+
+#botonYT:hover{
+    cursor: pointer;
+    animation-name: circuloCreciente;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-duration: 0.6s;
+    background-image: url("/Pictures/LogoYT_hover.png");
+
+}
+
+#botonIG:hover{
+    cursor: pointer;
+    animation-name: circuloCreciente;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-duration: 0.6s;
+    background-image: url("/Pictures/LogoIG_hover.png");
+}
+
+/* Efectos de animación */
+
+@keyframes circuloCreciente{
+
+    from{background-image: url("/Pictures/Anillo.png");
+       background-size: 0%;
+        opacity: 1;}
+
+    99%{background-image: url("/Pictures/Anillo.png");
+        background-size: 100%;
+        opacity: 0;}
+
+    to{
+        background-image: url("/Pictures/LogoFB_hover.png");
+        }
+}
+
+
+/* Cuerpo principal */
+
+body{
+    height: 80vh;
+    background-color: black;
+    color: white;
+}
+
+body main section ul{
+    margin-left: 20px;
+    list-style:disc;
+
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1700px;
+    margin:0 auto;
+}
+
+/* Footer */
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: "footerDireccion footerHorario"
+                            "footerCopyright footerCopyright";
+    margin-top: 50px;
+    background-color: lightgrey;
+    font-size: 16px;
+    color:black;
+    font-weight: bold;
+}
+
+footer div{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footerColumna{
+        list-style: none;
+}
+
+.footerBold{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+footer div{
+    text-align: center;
+    padding: 1%;
+} 
+
+#footerDireccion{
+    grid-area: footerDireccion;
+}
+
+#footerHorario{
+    grid-area: footerHorario;
+}
+
+#footerCopyright{
+    grid-area: footerCopyright;
+    align-items: center;
+}
+
+
+/* index.html */
+
+#divFlyer{
+    display: flex;
+    background-color: black;
+    background-image: url(/Images/FlyerPpal.png);
+    background-size: cover;
+    background-attachment:local;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%;
+}
+
+/* dondeentrenar.html */
+
+#tablaDojos{
+    background-image: linear-gradient(to right, darkcyan, rgb(3, 48, 48) );
+}
+
+.contentTablaDojos{
+    /* background-color: rgb(103, 146, 109); */
+    padding: 10px;
+}
+
+.headerTablaDojos{
+    /* background-image: linear-gradient(to right, darkcyan, cyan ); */
+    background-color:rgb(17, 48, 48); 
+    text-align: center;
+    padding: 10px;
+}
+
+/* contacto.html */
+
+main form{
+    margin-top:20px;
+    margin-left: 20px;
+}
+
+#campoNombre, #campoMail, #campoTelefono, #campoConsulta{
+    font-size: 20px;
+    font-weight:600;
+    width: 400px;
+    color: black;
+    display: block;
+}
+
+#botonSubmit, #botonReset{
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+/* Media Queries */
+
+
+@media only screen and (max-width:576px){
+
+    header{
+        display:grid;
+        justify-self: center;
+    }
+
+    #areaLogo{
+        content: url("/Images/LogoMini.png");
+        padding-left:30px;
+        padding-right: 30px;
+    }
+
+    .barraNavegador{
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        margin: 0px 0px;
+        max-width: 100vh;
+    }
+
+    .barraRS{
+        padding-left: 5px;
+        padding-right: 5px;
+        max-width: 160px;
+        vertical-align: middle;
+    }
+
+    #botonFB,#botonYT, #botonIG{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #divFlyer{
+        background-image: url(/Images/FlyerPpal150x414.png);
+    }
+}
+
+@media (max-width:768px) {
+
+     #barraMenu{
+         order: 2;
+     }
+
+    header{
+        display:block;
+        /* justify-self: center; */
+    }
+
+    #areaLogo{
+        content: url("/Images/LogoMini.png");
+        padding-left:30px;
+        padding-right: 30px;
+    }
+
+    .barraNavegador{
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        margin: 0px 0px;
+        max-width: 400px;
+    }
+
+    .barraRS{
+        padding-left: 5px;
+        padding-right: 5px;
+        max-width: 160px;
+        vertical-align: middle;
+    }
+
+    #botonFB,#botonYT, #botonIG{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #divFlyer{
+        background-image: url(/Images/FlyerPpal150x414.png);
+    }
+
+}
+
+@media only screen and (max-width:992px) {
+
+    .barraNavegador{
+        display:grid;
+        justify-self: center;
+    }
+
+    .barraNavegador #areaLogo{
+        order: 2;
+    }
+
+    .barraNavegador .barraMenu{
+        order: 1;
+    }
+
+    .barraNavegador .barraRS{
+        order: 3;
+    }
+
+
+
+}
+/* 
+@media only screen and (max-width:1297px) {
+
+    .barraNavegador #areaLogo{
+        order: 1;
+    }
+
+    .barraNavegador .barraMenu{
+        order: 2;
+    }
+
+    .barraNavegador .barraRS{
+        order: 3;
+    }
+
+    #botonFB,#botonYT, #botonIG{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #areaLogo{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #barraMenu{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .barraRS{
+        padding-left: 20px;
+        padding-right: 20px;
+        vertical-align: middle;
+    }
+}
+
+@media only screen and (max-width:1250px) {
+
+    .barraNavegador #areaLogo{
+        order: 1;
+    }
+
+    .barraNavegador .barraMenu{
+        order: 2;
+    }
+
+    .barraNavegador .barraRS{
+        order: 3;
+    }
+
+    .barraMenu li{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    nav.barraNavegador{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    nav{
+        display: inline-grid;
+        grid-template-columns: 1fr 4fr 1fr; 
+    }
+}
+
+@media only screen and (max-width:990px) {
+
+    .barraNavegador #areaLogo{
+        order: 1;
+    }
+
+    .barraNavegador .barraMenu{
+        order: 2;
+    }
+
+    .barraNavegador .barraRS{
+        order: 3;
+    }
+
+    nav{
+        justify-self: center;
+        grid-template-rows: 2fr 2fr;
+        grid-template-columns: 3fr 4fr; 
+        grid-template-areas: "areaLogo  redesSociales"
+                             "areaMenu areaMenu";
+
+    }
+
+    .menu{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #botonFB,#botonYT, #botonIG{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #areaLogo img{
+        width: 50px;
+        height: 50px;
+    }
+
+    nav.barraNavegador{
+        width: 100%;
+    }
+
+    #divFlyer{
+        background-image: url(/Images/FlyerPpal150x414.png);
+    }
+}*/
+
+@media only screen and (max-width:450px) {
+
+    footer{
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 2fr 1fr;
+        grid-template-areas: "footerDireccion"
+                            "footerHorario"
+                            "footerCopyright";
+    }
+
+}
+/*
+@media only screen and (max-width:390px) {
+
+    .barraRS{
+        padding-left: 10px;
+        padding-right: 10px;
+        align-self: flex-end;
+    }
+
+    #areaLogo{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+ */
