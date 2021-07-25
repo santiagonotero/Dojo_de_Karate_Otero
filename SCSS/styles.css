@@ -369,6 +369,44 @@ header .barraNavegador .barraRS #botonIG:hover {
   }
 }
 
+#seccionNosotros {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 10fr;
+      grid-template-rows: 1fr 10fr;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+      grid-template-areas: "tituloNosotros tituloNosotros" "textoNosotros areaFotoProfesor";
+}
+
+#seccionNosotros #textoNosotros {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: textoNosotros;
+}
+
+#seccionNosotros #tituloNosotros {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: tituloNosotros;
+}
+
+#seccionNosotros #areaFotoProfesor #fotoProfesor {
+  content: url("/Images/profesor.png");
+  padding: 0px 40px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: areaFotoProfesor;
+}
+
+#seccionNosotros #areaFotoProfesor .pieDeFoto {
+  text-align: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
 #tablaDojos {
   background-image: -webkit-gradient(linear, left top, right top, from(darkcyan), to(#033030));
   background-image: linear-gradient(to right, darkcyan, #033030);

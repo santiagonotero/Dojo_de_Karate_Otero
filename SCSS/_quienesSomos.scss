@@ -1,0 +1,28 @@
+#seccionNosotros{
+    display:grid;
+    grid-template-rows: 1fr 10fr;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "tituloNosotros tituloNosotros"
+                        "textoNosotros areaFotoProfesor";
+
+    #textoNosotros{
+        grid-area: textoNosotros;
+    }
+
+    #tituloNosotros{
+        grid-area: tituloNosotros;
+    }
+
+    #areaFotoProfesor{
+        #fotoProfesor{
+            content: url("/Images/profesor.png");
+            padding: 0px 40px;
+            grid-area: areaFotoProfesor;
+        }
+        .pieDeFoto{
+            text-align:center;
+            align-items: flex-end;
+        }
+    }
+}
+
