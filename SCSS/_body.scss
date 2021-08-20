@@ -7,7 +7,7 @@ $colorFondo: #010101;
 body{
     background-color: $colorFondo;
     color: $colorTexto;
-
+    min-width:fit-content;
 
     main section ul{
         margin-left: 20px;

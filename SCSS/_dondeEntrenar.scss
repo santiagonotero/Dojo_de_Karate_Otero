@@ -1,0 +1,51 @@
+.contenedorDondeEntrenar{
+
+    display:grid;
+    grid-auto-rows: auto;
+    grid-template-columns: 5fr 2fr;
+    grid-template-areas: "tituloDondeEntrenar tituloDondeEntrenar"
+                            "tablaDojos fotoDondeEntrenar";
+
+    @media(max-width:992px){
+        grid-template-columns: 1fr;
+        grid-template-areas: "tituloDondeEntrenar"
+                            "tablaDojos"
+                            "fotoDondeEntrenar";
+    }
+
+    #tituloDondeEntrenar{
+        margin-left: 30px;
+        grid-area: tituloDondeEntrenar;
+    }
+
+    #tablaDojos{
+        grid-area: tablaDojos;
+        background-image: linear-gradient(to right, darkcyan, rgb(3, 48, 48) );
+        margin:40px;
+
+        .headerTablaDojos{
+            background-color:rgb(17, 48, 48); 
+            text-align: center;
+            padding: 10px;
+        }
+        
+        .contentTablaDojos{
+            padding: 10px;
+        }
+    }
+
+    .fotoDondeEntrenar{
+        grid-area: fotoDondeEntrenar;
+        margin-top: 20px;
+        
+        #fotoDojo{
+            content: url("../Images/fotoDojoCABA.png");
+            margin: 20px auto;
+        }
+
+        .pieDeFoto{
+            text-align: center;
+        }
+    }
+
+}
